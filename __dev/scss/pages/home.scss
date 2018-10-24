@@ -1,0 +1,25 @@
+// Homepage
+// -----------------------------------------
+
+.main-logo {
+  display: block;
+  width: 80%;
+  max-width: 283px;
+  margin: 0 auto 3em;
+  }
+
+.repositories {
+  margin: 4em 0;
+  }
+
+.repository-grid {
+  padding: 1em 1.5em;
+  border: 1px solid darken($background, 15%);
+  }
+
+@include bounds(900px) {
+  .columns {
+    column-count: 2;
+    column-gap: 3em;
+    }
+  }

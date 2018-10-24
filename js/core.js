@@ -1,0 +1,1 @@
+"use strict";window.awd={},awd.url="/",awd.preloader_image=new Image,awd.preloader_image.src=awd.url+"images/loading.svg",console.log("Page loaded...");

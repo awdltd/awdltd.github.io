@@ -1,0 +1,44 @@
+// social icons
+// -----------------------------------------
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  a {
+    display: block;
+    margin-right: 8px;
+    position: relative;
+    }
+
+  svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    }
+
+  .facebook {
+    fill: #3f60a4;
+    }
+
+  .twitter {
+    fill: #09d3f1;
+    }
+
+  .gplus {
+    fill: #e8281e;
+    }
+
+  .instagram {
+    fill: #ea348a;
+    }
+
+  .gitter {
+    fill: #e30758;
+    }
+
+  span {
+    display: none;
+    }
+  }

@@ -1,0 +1,30 @@
+// Better media queries
+// -----------------------------------------
+
+// Generic media queries (up to)
+$hd: 1500px;
+$desktop: 1100px;
+$tablet: 750px;
+$mobile: 470px;
+
+// @include bounds
+@mixin bounds($min: 0, $max: infinity, $media: all) {
+  @if ($min == 0) and ($max == 'infinity') {
+    @content;
+  }
+  @elseif ($min == 0) {
+    @media #{ $media } and (max-width: #{ $max - 1px }) {
+      @content;
+    }
+  }
+  @elseif ($max == 'infinity') {
+    @media #{ $media } and (min-width: $min) {
+      @content;
+    }
+  }
+  @else {
+    @media #{ $media } and (min-width: $min) and (max-width: #{ $max - 1px }) {
+      @content;
+    }
+  }
+}

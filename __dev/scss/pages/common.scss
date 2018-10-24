@@ -1,0 +1,31 @@
+// common.scss
+// -----------------------------------------
+
+html {
+  font-size: 16px;
+  }
+
+body {
+  color: $text;
+  font-size: inherit;
+  line-height: 1.7em;
+  font-family: $font-body, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: $regular;
+  }
+
+html, body {
+  overflow-x: hidden;
+  background: darken($background, 5%);
+  }
+
+
+
+
+// Styles for smaller screens
+// -----------------------------------------
+
+@include bounds($hd, infinity) {
+  html {
+    font-size: calc(15px + 0.1vw);
+    }
+  }

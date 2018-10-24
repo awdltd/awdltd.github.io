@@ -1,0 +1,30 @@
+// SCSS setup detaults
+
+// body
+// -----------------------------------------
+$max_width:       72em;
+$page_width:      94%;
+
+
+// colours
+// -----------------------------------------
+$colour:          #4c8fc5;
+$yellow:          #ffd648;
+$background:      #f3f6f7;
+$text:            #3b3c3f;
+$titles:          #757985;
+$hover:           saturate(darken($colour, 10%), 15%);
+
+
+// fonts
+// ----------------------------------------
+$font-body:    'Lato';
+$font-title:   null;
+
+
+// font-weights
+// -----------------------------------------
+$bold:            600;
+$semibold:        600;
+$regular:         400;
+$light:           300;

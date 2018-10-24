@@ -1,0 +1,23 @@
+// header
+// -----------------------------------------
+
+header {
+  text-align: left;
+  box-shadow: 0 45px 40px -40px rgba(darken($background, 45%), 0.2);
+  padding: 25px 0;
+  margin: 0 0 2em;
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    height: 50px;
+    width: 149px;
+
+    img {
+      display: block;
+      height: 50px;
+      width: 149px;
+      }
+    }
+  }

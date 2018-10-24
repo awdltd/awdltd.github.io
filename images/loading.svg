@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <style>
+      .loader {
+        fill: transparent;
+        animation: showload 1.5s infinite linear;
+        transform-origin: 50% 50%;
+      }
+
+      .rotator {
+        animation: rotateme 1s infinite linear;
+        transform-origin: 50% 50%;
+      }
+
+      @keyframes showload {
+        0%    { stroke-dashoffset: 0; stroke-dasharray: 1,212; }
+        50%  { stroke-dashoffset: -23; stroke-dasharray: 84,212; }
+        100%  { stroke-dashoffset: -106; stroke-dasharray: 84,212; }
+      }
+
+      @keyframes rotateme {
+        0%    { transform: rotate(0deg);  }
+        100%  { transform: rotate(360deg);  }
+    </style>
+  </defs>
+  <g class="rotator" style="transform: translate(-60,-60);">
+    <circle class="loader" cx="30" cy="30" r="17" fill="none" stroke-linecap="round" stroke="#555" stroke-width="2" stroke-dasharray="120" stroke-dashoffset="150" />
+  </g>
+</svg>

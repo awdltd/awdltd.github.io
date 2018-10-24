@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 14 14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #008dff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="gitter" class="cls-1" d="M0,0H1.333V6.364H0V0ZM2.222,1.364H3.556V10H2.222V1.364Zm2.222,0H5.778V10H4.444V1.364Zm2.222,0H8v5H6.667v-5Z" transform="translate(3 2)"/>
+</svg>

@@ -1,0 +1,18 @@
+// footer
+// -----------------------------------------
+
+footer {
+  text-align: left;
+  margin-top: 3em;
+  padding: 1em 0;
+  color: darken($background, 35%);
+  font-size: 0.85em;
+  }
+
+@include bounds(900px) {
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+  }
