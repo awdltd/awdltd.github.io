@@ -83,6 +83,11 @@ gulp.task('html', function() {
     .pipe(plumber())
     .pipe(include())
     .pipe(gulp.dest(`${DIST}`));
+
+  gulp.src(`${DEV}html/repository/**/*`)
+    .pipe(plumber())
+    .pipe(include())
+    .pipe(gulp.dest(`${DIST}repository/`));
 });
 
 /* Set default for first GULP execution */

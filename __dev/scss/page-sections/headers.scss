@@ -7,7 +7,7 @@ h3,
 h4 {
   display: block;
   font-family: 'Baloo Bhaina', sans-serif;
-  margin: 3rem 0 0.6rem;
+  margin: 3rem 0 0.5rem;
   line-height: 1.1em;
   color: $text;
 
@@ -16,10 +16,11 @@ h4 {
     }
   }
 
-h1, h2 {
-  font-size: 2em;
+h1 {
+  font-size: 2.4em;
   }
 
+h2,
 h3 {
   font-size: 1.6em;
   }

@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>The AWD Playground | Hertfordshire Web Designers</title>
+  <meta name="description" content="AWD are Hertfordshire based web designers and developers, working in the region since 1999" />
+
+  <link href="/css/style.css" rel="stylesheet" type="text/css" media="screen">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Open+Sans:300,400" rel="stylesheet" type='text/css' media="all" />
+
+  <!-- Favicon styles
+  <link rel="apple-touch-icon" sizes="180x180" href="../templates/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="../templates/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../templates/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="../templates/manifest.json">
+  <link rel="mask-icon" href="../templates/safari-pinned-tab.svg" color="#fff">
+  <meta name="theme-color" content="#fff"> -->
+
+<style type="text/css">
+  .minimalist {
+    position: relative;
+    width: 100%;
+    max-width: 11rem;
+    }
+
+  .minimalist input {
+    font-size: 18px;
+    height: 4rem;
+    padding: 0 4rem;
+    border-radius: 2rem;
+    border: 0;
+    background: #fff;
+    color: #222;
+    box-shadow: 0 10px 65px -10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: lighter;
+    }
+
+  .minimalist input:focus {
+    outline: none;
+    box-shadow: 0 5px 55px -10px rgba(0, 0, 0, 0.2), 0 0 4px #3fb0ff; /* Allows border radius on focus */
+    }
+
+  .minimalist input[type=number]::-webkit-inner-spin-button,
+  .minimalist input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+  .minimalist button {
+    position: absolute;
+    width: 2.8rem;
+    height: 2.8rem;
+    top: 0.6rem;
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="50"><path d="M17 25h16M67 25h16M75 17v16" fill="none" stroke="#3b4542" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" /></svg>') no-repeat 0 0;
+    background-size: 5.6rem 2.8rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 100%;
+    border-radius: 1.4rem;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    opacity: 0.5;
+    }
+
+  .minimalist button:active {
+    background-position-y: 1px;
+    box-shadow: inset 0 2px 12px -4px #c5d1d9;
+    }
+
+  .minimalist button:focus {
+    outline: none;
+    }
+
+  .minimalist button:hover {
+    opacity: 1;
+    }
+
+  .minimalist button.sub {
+    left: 0.6rem;
+    }
+
+  .minimalist button.add {
+    right: 0.6rem;
+    background-position-x: -2.8rem;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="window">
+    <header>
+    <picture>
+      <source srcset="/images/awd-logo.svg" type="image/svg+xml" />
+      <source srcset="/images/awd-logo.png" type="image/png" />
+      <img src="/images/awd-logo.png" alt="AWD Ltd. logo" class="logo" />
+    </picture>
+
+    <div class="social-icons" aria-label="Our social media accounts">
+      <!-- <include src="../templates/social-icon.html" url="https://twitter.com/awdwebdesign" name="Twitter" icon="twitter" /> -->
+    </div>
+  </header>
+
+  <main>
+    <section class="repositories">
+      <h1>Quantity inputs</h1>
+
+      <p>JavaScript snippet to create a light-weight, usable and reliable quantity input</p>
+
+      <h2>Examples</h2>
+
+      <figure>
+        <p class="caption">Unstyled:</p>
+        <div data-quantity></div>
+
+        <hr />
+
+        <p class="caption">Minimalist:</p>
+        <div data-quantity class="minimalist"></div>
+      </figure>
+
+      <h2>Code</h2>
+
+      <figure class="code">
+        <code>
+          <pre>&lt;div data-quantity&gt;&lt;/div&gt;</pre>
+          <pre>&lt;script src="./path-to/quantity.js"&gt;&lt;/script&gt;</pre>
+        </code>
+      </figure>
+
+      <h2>Why use this?</h2>
+
+      <p>Because it is super light-weight (only 411 bytes when gzipped), has no dependencies and can be implemented into essentially any modern build. It allows for easy custom CSS styling (there is no clunky styling forced in by default) and you can also transpile it for older browsers using Babel or any other JavaScript transpiler.</p>
+
+      <h2>Works in?</h2>
+
+      <p>Any browser that supports the JavaScript <code>class</code> syntax (most releases of Chrome, Firefox, Safari, Opera, Edge). Does not work with IE11 or below without being transpiled.</p>
+
+      <h2>License</h2>
+
+      <p>Licensed under GPL-3.0</p>
+
+      <script type="text/javascript">
+        /**
+         *  @class
+         *  @function QuantityInput
+         *  @param {DOMObject} element to create a quantity wrapper around
+         */
+        class QuantityInput {
+          constructor(self) {
+            // Create input
+            this.input = document.createElement('input');
+            this.input.value = 1;
+            this.input.type = 'number';
+            this.input.name = 'quantity';
+
+            // Button constructor
+            function Button(text, className) {
+              this.button = document.createElement('button');
+              this.button.type = 'button';
+              this.button.innerHTML = text;
+              this.button.title = text;
+              this.button.classList = className;
+
+              return this.button;
+            };
+
+            // Create buttons
+            this.subtract_button = new Button('Decrease quantity', 'sub');
+            this.add_button = new Button('Increase quantity', 'add');
+
+            // Add input and buttons to wrapper
+            self.appendChild(this.subtract_button);
+            self.appendChild(this.input);
+            self.appendChild(this.add_button);
+
+            // Add functionality to buttons
+            this.subtract_button.addEventListener('click', () => this.change_quantity(-1));
+            this.add_button.addEventListener('click', () => this.change_quantity(1));
+          }
+
+          change_quantity(amount) {
+            // Get current value
+            let current_quantity = Number(this.input.value);
+
+            // Ensure quantity is a valid number
+            if(isNaN(current_quantity)) current_quantity = 1;
+
+            // Change quantity
+            current_quantity += amount;
+
+            // Ensure quantity is always greater than 1
+            current_quantity = Math.max(current_quantity, 1);
+
+            // Output number
+            this.input.value = current_quantity;
+          }
+        }
+
+        // Set up quantity forms
+        (function() {
+          let quantities = document.querySelectorAll('[data-quantity]');
+
+          if(quantities instanceof Node) quantities = [quantities];
+          if(quantities instanceof NodeList) quantities = [].slice.call(quantities);
+          if(quantities instanceof Array) {
+            quantities.forEach((div) => div.quantity = new QuantityInput(div));
+          }
+        })();
+      </script>
+    </section>
+  </main>
+    <footer>
+    <p>Copyright &copy; AWD, 2018. All rights reserved.</p>
+    <p><a href="https://www.awdltd.co.uk/" target="_blank" rel="noopener" title="Web Design Hertfordshire">Advanced Web Designs</a></p>
+  </footer>
+
+
+  <script src="/js/core.js" type="module"></script>
+</div>
+</body>
+</html>

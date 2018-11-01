@@ -1,6 +1,28 @@
 // text, lists, inline content, etc
 // -----------------------------------------
 
+p,
+ul,
+ol,
+blockquote {
+  margin: 1rem 0;
+
+  &:first-child {
+    margin-top: 0;
+    }
+
+  &:first-child {
+    margin-bottom: 0;
+    }
+  }
+
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p {
+  margin-top: 1rem;
+  }
+
 p {
   a {
     color: inherit;
@@ -12,6 +34,12 @@ p {
     &:hover {
       background-size: 100% 100%;
       }
+    }
+
+  &.caption {
+    font-size: 0.9em;
+    color: darken($background, 35%);
+    margin-bottom: 0.3rem;
     }
   }
 
