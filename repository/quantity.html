@@ -53,6 +53,10 @@
     margin: 0;
     }
 
+  .minimalist input[type=number] {
+    -moz-appearance: textfield;
+    }
+
   .minimalist button {
     position: absolute;
     width: 2.8rem;
@@ -170,7 +174,7 @@
               this.button.type = 'button';
               this.button.innerHTML = text;
               this.button.title = text;
-              this.button.classList = className;
+              this.button.classList.add(className);
 
               return this.button;
             };
